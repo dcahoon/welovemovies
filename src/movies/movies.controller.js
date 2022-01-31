@@ -25,7 +25,6 @@ function read(req, res, next) {
 function list(req, res, next) {
     const isShowing = req.query.is_showing
     if (isShowing === "true") {
-        console.log("is showing: ", isShowing)
         moviesService
             .listShowing()
             .then((data) => res.json({ data }))
