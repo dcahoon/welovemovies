@@ -54,7 +54,7 @@ function getReviewsForMovie(req, res, next) {
 }
 
 module.exports = {
-    list,
+    list: [list],
     read: [movieExists, read],
     theatersPlayingMovie: [movieExists, theatersPlayingMovie],
     getReviewsForMovie: [movieExists, getReviewsForMovie],

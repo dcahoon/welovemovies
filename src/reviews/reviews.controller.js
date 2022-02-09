@@ -8,7 +8,6 @@ function reviewExists(req, res, next) {
             .then((review) => {
                 if (review) {
                     res.locals.review = review
-                    console.log(res.locals.review)
                     return next()
                 }
                 next({ status: 404, message: `Review cannot be found.` })
